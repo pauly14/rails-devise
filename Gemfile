@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-
+gem "heroku"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.1.2'
+
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -38,7 +38,9 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+group :production do
+  gem 'thin'
+end
 
 gem 'devise'
 gem 'foundation-rails'
@@ -65,7 +67,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 end
-
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'

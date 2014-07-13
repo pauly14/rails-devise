@@ -33,7 +33,9 @@ module RailsDevise
     # config.i18n.default_locale = :de
 
     # For Foundation 5
-    config.assets.precompile += %w( vendor/modernizr )
+    config.assets.initialize_on_precompile=false
 
   end
+# Heroku requires this to be false
+
 end
