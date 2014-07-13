@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem "heroku"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-ruby '2.1.2'
+ruby '2.1.1'
 
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
@@ -38,15 +38,15 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-group :production do
+
   gem 'thin'
-end
 
 gem 'devise'
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 
+gem 'rails_12factor'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

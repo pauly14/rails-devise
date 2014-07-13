@@ -66,7 +66,6 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.38.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -94,15 +93,6 @@ GEM
     guard-rspec (4.2.10)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
-    heroku (3.9.1)
-      heroku-api (~> 0.3.17)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.18)
-      excon (~> 0.27)
-      multi_json (~> 1.8)
     hike (1.2.3)
     hub (1.12.2)
     i18n (0.6.11)
@@ -129,7 +119,6 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.0)
     multi_json (1.10.1)
-    netrc (0.7.7)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
@@ -154,9 +143,14 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.4)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_apps_pages (0.5.10)
     rails_apps_testing (0.3.6)
     rails_layout (1.0.20)
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.4)
       actionpack (= 4.1.4)
       activesupport (= 4.1.4)
@@ -171,9 +165,6 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
-    rest-client (1.6.8)
-      mime-types (~> 1.16)
-      rdoc (>= 2.4.2)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -267,7 +258,6 @@ DEPENDENCIES
   guard-bundler
   guard-rails
   guard-rspec
-  heroku
   hub
   jbuilder (~> 2.0)
   jquery-rails
@@ -275,6 +265,7 @@ DEPENDENCIES
   pg
   quiet_assets
   rails (= 4.1.4)
+  rails_12factor
   rails_apps_pages
   rails_apps_testing
   rails_layout
